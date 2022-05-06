@@ -1,0 +1,99 @@
+@import url('navBar.css');
+/* section */
+body section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#paymentForm{
+    border: 1px solid rgb(189, 189, 189);
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+}
+#paymentForm #flexingDiv{
+    display: flex;
+    justify-content: space-between;
+}
+#flexingDiv #billingAddressDiv{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+#billingAddressDiv div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#flexingDiv #paymentDiv{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+#flexingDiv #paymentDiv div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#paymentForm input{
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 2px;
+    padding: 7px;
+}
+
+#state,#zipInput{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    box-sizing: border-box;
+}
+#state input, #zipInput input{
+    width: 100%;
+}
+
+#flexingDiv #paymentDiv div #year{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+#flexingDiv #paymentDiv div #cvvDiv{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+input{
+    outline: none;
+}
+label{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(65, 65, 65);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+#btnFinishChickOut{
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #ffaa2b;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#paymentForm h1{
+    font-size: 23px;
+    color: rgb(65, 65, 65);
+}
+
+.forTest{
+    font-size: 13px;
+    color: red;
+}

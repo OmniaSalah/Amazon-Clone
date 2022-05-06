@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+body{
+    padding: 20px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:white;
+}
+
+.container{
+    padding-top: 20px;
+    width: 380px;
+    background: #fff;
+}
+.amazon-logo{
+    width: 100px;
+}
+form{
+    border: 1px #ddd solid;
+    border-radius: 3px;
+    padding: 20px 30px;
+}
+.signIn{
+    font-size: 30px;
+    display: block;
+    margin-bottom: 20px;
+}
+form .input-field{
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+form .input-field input:not([type=submit]){
+    padding: 8px 10px;
+    border: none;
+    border: 1px rgb(184, 184, 184) solid;
+    border-radius: 2px;
+    outline: none;
+    margin-bottom: 5px;
+}
+form input[type=text]{
+    margin-bottom: 15px !important;
+}
+form .input-field input:focus{
+    transition: .5s;
+    border: 1px #fd9a15 solid;
+    box-shadow: 0 0 6px 0 #fd9a15;
+}
+form .forgot-pass{
+    font-size: 13px;
+    align-self: flex-end;
+}
+form .conditions{
+    margin: 20px 0;
+    font-size: 12px;
+}
+form .signIn-btn input{
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    border: 1px rgb(184, 184, 184) solid;
+    background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    border-radius: 2px;
+    outline: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+form .signIn-btn input:hover{
+    transition: .5s;
+    background: #e9b739;
+}
+form .checkbox-content{
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgb(48, 48, 48);
+    display: flex;
+    gap: 5px;
+}
+.new-user{
+    margin: 30px 0;
+    font-size: 13px;
+    color: rgb(146, 146, 146);
+    text-align: center;
+    position: relative;
+}
+.new-user::before{
+    content: '';
+    position: absolute;
+    height: .5px;
+    width: 35%;
+    background-color: #ddd;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.new-user::after{
+    content: '';
+    position: absolute;
+    height: .5px;
+    width: 35%;
+    background-color: #ddd;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+a.create-account{
+    width: 100%;
+    display: block;
+    padding: 8px 10px;
+    border: none;
+    border: 1px rgb(184, 184, 184) solid;
+    background: rgb(240, 240, 240);
+    border-color: rgb(177, 177, 177);
+    color: #111;
+    border-radius: 2px;
+    outline: none;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+a.create-account:hover{
+    transition: .5s;
+    background: rgb(226, 226, 226);
+}

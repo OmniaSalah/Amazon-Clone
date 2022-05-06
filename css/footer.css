@@ -1,0 +1,94 @@
+/* start footer */
+footer{
+    background-color: #232f3e;
+    color: white;
+}
+footer .to-top{
+    padding: 20px 0;
+    background-color: #131a22;
+    text-align: center;
+}
+footer a{
+    color: white;
+}
+.footer-info{
+    border-bottom: 1px solid gray;
+}
+.footer-container{
+    padding: 60px 0;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-container h4{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.footer-container a{
+    font-size: 14px;
+    color: rgb(177, 177, 177);
+}
+.footer-container a:hover{
+    color: rgb(212, 212, 212);
+}
+.amazon-logo{
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.amazon-logo img{
+    width: 100px;
+    margin-top: 10px;
+}
+.amazon-logo .info{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.amazon-logo .info .languages{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 14px;
+    color: rgb(177, 177, 177);
+}
+.amazon-logo .info .country{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 14px;
+    color: rgb(177, 177, 177);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.country .country-bg{
+    background: url('../img/egypt.png') center center no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.footer-copyright{
+    padding-bottom: 50px;
+    background-color: #131a22;
+}
+.footer-copyright a{
+    display: block;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.footer-copyright a span{
+    font-size: 13px;
+    color: white;
+}
+.copyright{
+    font-size: 15px;
+    text-align: center;
+    color: rgb(177, 177, 177);
+}
+/* end footer */

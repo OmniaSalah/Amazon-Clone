@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <link href="//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/category.css">
+    <title>Your Souq is now Amazone!!</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="mainDiv">
+                <a href="index.html">
+                    <div id="logoDiv">
+                        <div id="logoSpan">
+                            <img src="img/Amazon-Logo-nav.png" alt="">
+                        </div>
+                        <div id="egSpan">
+                            .eg
+                        </div>
+                    </div>
+                </a>
+                <div id="deliverDiv"> 
+                    <div class="location">
+                        <i class="fa fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <span id="span1">Deliver to <span class="deliver-user-name"></span></span><br>
+                        <span id="span2">Egypt</span>
+                    </div>
+                </div>
+                <div id="searchDiv">
+                    <div id="div1">
+                        <input type="text" placeholder="Search.." name="search" id="search" onfocus="searchInputAddBorder()" onblur="searchInputRemoveBorder()">
+                    </div>
+                    <div id="div2">
+                        <button type="submit" onclick="search(event)"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div id="dropDownDiv" onmouseover="onHover()" onmouseleave="onLeave()">
+                    <div class="dropdown">
+                        <div>
+                            <img src="img/Egypt Flag Photos (15).jpg" alt="">
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div id="dropdown-content">
+                            <input type="radio" id="arabic" name="lanuage" checked>
+                            <label for="arabic">العربية-AR</label><br>
+                            <hr>
+                            <input type="radio" id="english" name="lanuage">
+                            <label for="english">English-EN</label><br>
+                            <hr>
+                            <img src="img/Egypt Flag Photos (15).jpg" alt=""> <span> You are shopping on Amazon.eg</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="signInDiv" onmouseover="onHover2()" onmouseleave="onLeave2()">
+                    <div class="dropdown">
+                        <div>
+                            <span>Hello, <span class="hello-user-name">Sign in</span></span><br>
+                            <span id="span2">Account & Lists</span>
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div id="dropdown-content-signIn">
+                            <div class="sign-in-btn">
+                                <a class="signIn" href="signIn.html">Sign in</a><br>
+                                <span>New customer? <a class="start-here" href="signUp.html">Start here.</a></span>
+                                <hr>
+                            </div>
+                            <div id="signInList">
+                                <div>
+                                    <h3>Your Lists</h3>
+                                    <p>Create a List</p>
+                                </div>
+                                <div>
+                                    <h3>Your Account</h3>
+                                    <ul>
+                                        <li><a href="#">Your Account</a></li>
+                                        <li><a href="#">Your Orders</a></li>
+                                        <li><a href="#">Your Addresses</a></li>
+                                        <li><a href="#">Your Lists</a></li>
+                                        <li><a href="#">Your Recommendations</a></li>
+                                        <li><a href="#">Your Seller Account</a></li>  
+                                        <li><a href="#">Switch account</a></li>  
+                                        <li><a class="sign-out" href="signIn.html">Sign out</a></li>                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div id="orders">
+                    <span><a href="orders.html" onclick="openOrders(event)">Orders</a></span>
+                </div>
+                <div class="cart-navigate" onclick="openCart()">
+                    <span class="cart-count">0</span>
+                    <img src="img/cart.png" alt="">
+                    Cart
+                </div>
+
+            </div>    
+        </nav>
+        <div id="categories">
+            <ul>
+                <li><a href="#"><span class="amazon-user-name">your</span> amazon.eg</a></li>
+                <li><a href="category.html" data-category="men's clothing" class="category-link">Men's Clothing</a></li>
+                <li><a href="category.html" data-category="women's clothing" class="category-link">Women's Clothing</a></li>
+                <li><a href="category.html" data-category="jewelery" class="category-link">jewelery</a></li>
+                <li><a href="category.html" data-category="electronics" class="category-link">Electronics</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <div id="overlay"></div>
+    <!-- loader -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <!-- end loader -->
+    <section class="category-section">
+        <div class="container">
+            <div class="filter-section">
+                <button class="clear-filter">Clear Filters</button>
+                <span>Filter Price:</span>
+                <label for="any">
+                    <input type="radio" name="filter-price" id="any" data-type="any" checked>
+                    Any
+                </label>
+                <label for="rang1">
+                    <input type="radio" name="filter-price" id="rang1" data-type="range" data-min="5" data-max="20">
+                    $5 to $20
+                </label>
+                <label for="rang2">
+                    <input type="radio" name="filter-price" id="rang2" data-type="range" data-min="21" data-max="30">
+                    $21 to $30
+                </label>
+                <label for="rang3">
+                    <input type="radio" name="filter-price" id="rang3" data-type="range" data-min="31" data-max="40">
+                    $31 to $40
+                </label>
+                <label for="open-range">
+                    <input type="radio" name="filter-price" id="open-range" data-type="openRange"  data-min="40">
+                    more than $40
+                </label>
+            </div>
+            <div class="filtered-product">
+                <p class="category-para"></p>
+                <div class="products">
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+        <!-- start footer -->
+        <footer>
+            <div class="to-top">
+                <a href="#">Back to top</a>
+            </div>
+            <div class="footer-info">
+                <div class="footer-container">
+                    <div>
+                        <h4>Get to Know Us</h4>
+                        <ul>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Shop with Us</h4>
+                        <ul>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Your Addresses</a></li>
+                            <li><a href="#">Your Lists</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Make Money with Us</h4>
+                        <ul>
+                            <li><a href="#">Sell on Amazon</a></li>
+                            <li><a href="#">Fulfillment by Amazon</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Let Us Help You</h4>
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Amazon App Download</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="amazon-logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <div class="info">
+                    <div>
+                        <a href="#" class="languages">
+                            <i class="fa fa-globe-africa"></i> English
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="country">
+                            <span class="country-bg"></span>
+                            <span>Egypt</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="footer-container">
+                    <div>
+                        <a href="#">
+                            <span>Sell on Amazon.ae</span>
+                            <br>
+                            Sell globally, start with UAE
+                        </a>
+                        <a href="#">
+                            <span>IMDb</span>
+                            <br>
+                            Movies, TV
+                            <br>& Celebrities
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <span>Sell on Amazon.ae</span>
+                            <br>
+                            Sell globally, start with Saudi Arabia
+                        </a>
+                        <a href="#">
+                            <span>Alexa</span>
+                            <br>
+                            Actionable Analytics
+                            <br> for the Web
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <span>Amazon Web Services</span>
+                            <br>
+                            Scalable Cloud
+                            <br>Computing Services
+                        </a>
+                        <a href="#">
+                            <span>Book Depository</span>
+                            <br>
+                            Books With Free
+                            <br>Delivery Worldwide
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <span>Goodreads</span>
+                            <br>
+                            Book reviews
+                            <br>& recommendations
+                        </a>
+                        <a href="#">
+                            <span>Shopbop</span>
+                            <br>
+                            Designer
+                            <br>Fashion Brands
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <span>Audible</span>
+                            <br>
+                            Download
+                            <br>Audio Books
+                        </a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Conditions of Use & SalePrivacy NoticeInterest-Based Ads&copy;1996–2022, Amazon.com, Inc. or its affiliates
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+    <script src="js/category.js"></script>
+</body>
+</html>

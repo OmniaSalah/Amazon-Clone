@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <link href="//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet"  href="css/sign_up.css">
+    <title>Amazon Sign Up</title>
+</head> 
+ <body>
+    <img class="amazon-logo" src="img/Amazon-Logo.png" alt="">
+    <div class="container">
+        <form action="index.html">
+            <span class="signUp">Create account</span>
+            <div class="input-field">
+                <label for="name">Your name</label>
+                <input type="text" required id="name">
+                <span class="invalid">Invalid name</span>
+            </div>
+            <div class="input-field">
+                <label for="emailOrPhoneNum">Mobile number or email</label>
+                <input type="text" required id="emailOrPhoneNum">
+                <span class="invalid">Wrong or Invalid email address or mobile phone number. Please correct and try again.</span>
+            </div>
+            <div class="input-field password">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="At least 6 characters">
+                <span class="note">Passwords must be at least 6 characters.</span>
+                <span class="invalid">Minimum 6 characters required</span>
+            </div>
+            <div class="input-field">
+                <label for="re-password">Re-enter password</label>
+                <input type="password" id="re-password" required>
+                <span class="invalid">Passwords must match</span>
+            </div>
+            <div class="signUp-btn">
+                <input type="submit" value="Sign-Up">
+            </div>
+            <p class="conditions">By creating an account, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</p>
+            <div class="line"></div>
+            <p class="sign-up">Already have an account? <a href="signIn.html">Sign in</a></p>
+        </form>
+    </div>
+
+    <script src="js/signUp.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+body{
+    padding: 20px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:white;
+}
+
+.container{
+    padding-top: 20px;
+    width: 380px;
+    background: #fff;
+}
+.amazon-logo{
+    width: 100px;
+}
+form{
+    border: 1px #ddd solid;
+    border-radius: 3px;
+    padding: 20px 30px;
+}
+.signUp{
+    font-size: 30px;
+    display: block;
+    margin-bottom: 5px;
+}
+form .input-field{
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+form .input-field input:not([type=submit]){
+    padding: 8px 10px;
+    border: none;
+    border: 1px rgb(184, 184, 184) solid;
+    border-radius: 2px;
+    outline: none;
+    margin-bottom: 5px;
+}
+form .input-field input:focus{
+    transition: .5s;
+    border: 1px #fd9a15 solid;
+    box-shadow: 0 0 6px 0 #fd9a15;
+}
+form .password span{
+    font-size: 12px;
+}
+form .invalid{
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+form .conditions{
+    margin: 20px 0;
+    font-size: 12px;
+}
+form .signUp-btn input{
+    margin-top: 15px;
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    border: 1px rgb(184, 184, 184) solid;
+    background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    border-radius: 2px;
+    outline: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+form .signUp-btn input:hover{
+    transition: .5s;
+    background: #e9b739;
+}
+.line{
+    width: 90%;
+    height: 1px;
+    margin: 10px auto 25px;
+    background-color: #ddd;
+}
+.sign-up{
+    font-size: 13px;
+}
